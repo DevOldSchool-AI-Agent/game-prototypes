@@ -1,25 +1,14 @@
-# Progress Log
+Original prompt: Plan and build classic game clone (quality-gated + PR delivery)
 
-## 2026-03-11 - EarthBound SNES Clone (codex/earthbound-clone)
-
-### Completed
-- Created new project: `games/earthbound-snes-clone`.
-- Added planning docs before coding: `README.md`, `KANBAN.md`.
-- Scaffolded Phaser + TypeScript + Vite project with modular layout (`scenes/`, `systems/`, `entities/`, `ui`).
-- Implemented full loop vertical slice:
-  - menu start -> 3-stage top-down action play -> win/lose result -> restart.
-  - Stage progression with enemy quotas and exit unlock.
-  - Health, timer pressure, score, restart shortcut, responsive scaling.
-- Added Playwright smoke harness and deterministic test hooks.
-- Added QA log in `games/earthbound-snes-clone/QA.md`.
-
-### Verification
-- `npm install` ✅
-- `npm run typecheck` ✅
-- `npm run build` ✅
-- `npm run test:smoke` ❌ (sandbox browser launch restriction)
+## 2026-03-11 - Chrono Trigger SNES Clone
+- Created a new game project at `games/chrono-trigger-snes-clone` using Phaser + TypeScript + Vite.
+- Added planning docs (`README.md`, `KANBAN.md`) with scoped features, non-scope, architecture, risks, and card-level verification criteria.
+- Implemented complete 3-stage action vertical slice with loop: start -> play -> win/lose -> restart/menu.
+- Added deterministic QA hooks and browser automation artifacts (`render_game_to_text`, screenshot, console log).
+- Completed quality pass refactor of `PlayScene` setup/collision initialization for lower fragility.
+- Verification completed: install/typecheck/build/smoke/browser QA all passing; zero console/runtime errors.
 
 ### Remaining TODOs
-- Re-run `npm run test:smoke` in an environment that allows Playwright browser launch.
-- Capture and attach passing smoke artifacts (screenshots/traces) in `QA.md`.
-- Move final Kanban quality card to Done after smoke pass.
+- Add audio cues/music layers.
+- Expand enemy variety and stage-specific hazard mechanics.
+- Add automated gameplay assertions on `render_game_to_text` transitions.
