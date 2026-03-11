@@ -1,0 +1,21 @@
+{
+  "name": "super-punch-out-snes-clone",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run typecheck && vite build",
+    "typecheck": "tsc --noEmit",
+    "test:smoke": "playwright test --config=playwright.config.ts"
+  },
+  "dependencies": {
+    "phaser": "^3.90.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "@playwright/test": "^1.54.2",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.3"
+  }
+}
