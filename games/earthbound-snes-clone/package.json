@@ -1,0 +1,21 @@
+{
+  "name": "earthbound-snes-clone",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "test:smoke": "npm run build && playwright test"
+  },
+  "dependencies": {
+    "phaser": "^3.90.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "@playwright/test": "^1.53.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.0"
+  }
+}
