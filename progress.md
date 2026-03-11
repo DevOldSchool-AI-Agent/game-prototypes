@@ -12,3 +12,15 @@ Original prompt: Plan and build classic game clone (quality-gated + PR delivery)
 - Add audio cues/music layers.
 - Expand enemy variety and stage-specific hazard mechanics.
 - Add automated gameplay assertions on `render_game_to_text` transitions.
+
+## 2026-03-11 - Pokemon Classic Clone
+- Created a new game project at `games/pokemon-classic-clone` with Phaser + TypeScript + Vite and Playwright smoke automation.
+- Documented planning artifacts (`README.md`, `KANBAN.md`) with scope, non-scope, architecture, risks, and card-level quality gates.
+- Implemented full loop `start -> play -> win/lose -> restart` across 3 escalating stages with deterministic QA hooks.
+- Completed quality pass with visual readability upgrades and refactor of stage runtime orchestration into `src/systems/StageRuntime.ts`.
+- Verification completed: install/typecheck/build/smoke all passing; zero runtime/console errors during smoke run.
+
+### Remaining TODOs
+- Add optional audio cues for pickup, damage, and stage transition feedback.
+- Add optional non-QA path victory automation that does not depend on QA hooks.
+- Reduce bundle size warning by splitting non-critical scene code.
