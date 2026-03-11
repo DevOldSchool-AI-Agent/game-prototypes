@@ -1,0 +1,21 @@
+{
+  "name": "mario-paint-gnat-attack-snes-clone",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit",
+    "test:smoke": "playwright test --config=playwright.config.ts"
+  },
+  "dependencies": {
+    "phaser": "^3.90.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.2",
+    "@types/node": "^25.4.0",
+    "typescript": "^5.8.2",
+    "vite": "^7.1.7"
+  }
+}
