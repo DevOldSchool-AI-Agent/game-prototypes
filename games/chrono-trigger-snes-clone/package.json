@@ -1,0 +1,21 @@
+{
+  "name": "chrono-trigger-snes-clone",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit",
+    "test:smoke": "node ./scripts/smoke-test.mjs",
+    "qa:browser": "node ./scripts/browser-client.mjs"
+  },
+  "dependencies": {
+    "phaser": "^3.90.0"
+  },
+  "devDependencies": {
+    "puppeteer": "^24.5.0",
+    "typescript": "^5.8.2",
+    "vite": "^7.1.7"
+  }
+}
